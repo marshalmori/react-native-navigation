@@ -2,8 +2,13 @@ import React from 'react';
 import {StyleSheet, Text, View, Button} from 'react-native';
 
 const Inicio = ({navigation}) => {
+  const informacion = {
+    clienteId: 20,
+    totalpagar: 500,
+  };
+
   const visitarNosotros = () => {
-    navigation.navigate('Nosotros');
+    navigation.navigate('Nosotros', informacion);
   };
 
   return (

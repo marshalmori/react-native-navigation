@@ -1,7 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View, Button} from 'react-native';
 
-const Nosotros = ({navigation}) => {
+const Nosotros = ({navigation, route}) => {
+  const {clienteId} = route.params;
+
   const visitarInicio = () => {
     navigation.navigate('Inicio');
     // navigation.goBack();
@@ -10,7 +12,7 @@ const Nosotros = ({navigation}) => {
 
   return (
     <View style={styles.contenedor}>
-      <Text>Inicio</Text>
+      <Text>{clienteId}</Text>
       <Button title="Ir a Inicio" onPress={() => visitarInicio()} />
     </View>
   );
